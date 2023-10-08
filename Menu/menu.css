@@ -43,7 +43,7 @@ img {
 }
 
 
-/* styling media queries */
+/* media queries and break-points */
 @media screen and (min-width: 1024px) {
     :root {
         --normal-font-size: 1rem;
@@ -112,5 +112,11 @@ header {
 
 
 /* sidebar - show sidebar, active link */
-
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: var(--header-height);
+    width: 18.25rem;
+    height: 100%;
+}
 
