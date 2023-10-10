@@ -28,6 +28,7 @@ body, input, button {
 
 body {
     color: var(--white);
+    background-color: blueviolet;
 }
 
 input, button {
@@ -58,6 +59,6 @@ img {
     height: 100%;
     object-fit: cover;
     object-position: center;
-    filter: brightness(.45);
-    
+    /* filter: brightness(.4); */
+    visibility: hidden;
 }
