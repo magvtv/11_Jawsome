@@ -1,0 +1,46 @@
+/* google fonts - quicksand */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --white: #ece5e5;
+    --black: #080A0D;
+
+
+    --body-font: 'Quicksand', sans-serif;
+    --h1-font: 1.75rem;
+    --normal-fz: 1rem;
+    --small-fz: .8rem;
+
+    --medium-fw: 600;
+}
+
+
+/* base styles */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body, input, button {
+    font-size: var(--normal-fz);
+    font-family: var(--body-font);
+}
+
+body {
+    color: var(--white);
+}
+
+input, button {
+    border: none;
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
