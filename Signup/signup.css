@@ -79,7 +79,7 @@ img {
   font-size: var(--h1-font);
   font-weight: var(--medium-fw);
   text-transform: capitalize;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .signup__content,
@@ -126,4 +126,53 @@ img {
   top: 0.75rem;
   font-weight: var(--medium-fw);
   transition: top, 0.25s, font-size, 0.25s;
+}
+
+.password__eye {
+  position: absolute;
+  right: 0;
+  top: 1.125rem;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.signup__box:nth-child(2) input {
+  padding-right: 1.75rem;
+}
+
+.signup__check,
+.signup__check-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.signup__check {
+  margin-bottom: 1.5rem;
+}
+
+.signup__check-label {
+  text-transform: capitalize;
+}
+
+.signup__check-label,
+.login__account {
+  font-size: var(--small-fz);
+}
+
+.signup__check-group {
+  column-gap: 0.5rem;
+}
+
+.signup__check-input {
+  width: 1rem;
+  height: 1rem;
+  border: none;
+}
+.login__account a {
+  color: var(--white);
+}
+
+.login__account a:hover {
+  text-decoration: underline;
 }
