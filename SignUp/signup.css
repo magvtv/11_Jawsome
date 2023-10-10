@@ -5,7 +5,6 @@
     --white: #ece5e5;
     --black: #080A0D;
 
-
     --body-font: 'Quicksand', sans-serif;
     --h1-font: 1.75rem;
     --normal-fz: 1rem;
@@ -59,4 +58,6 @@ img {
     height: 100%;
     object-fit: cover;
     object-position: center;
+    filter: brightness(.45);
+    
 }
