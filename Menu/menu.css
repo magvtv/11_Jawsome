@@ -100,10 +100,35 @@ img {
         column-gap: 1rem;
         margin-left: 0.5rem;
         margin-top: auto;
-        
     }
 
+    .sidebar__link-float {
+        display: block;
+        font-size: .25rem;
+        width: max-content;
+        margin: 0 auto;
+        position: absolute;
+        text-align: center;
+        left: 0;
+        right: 0;
+        bottom: 0.25rem;
+        opacity: 0;
+        transition: color .5s, opacity, .5s;
+    }
 
+    /* minisidebar */
+    .show-sidebar {
+        width: 7rem;
+    }
+
+    /* .show-sidebar .sidebar__link-name {
+        /* opacity: 0; */
+
+    .show_sidebar .sidebar__link:hover .sidebar__link-float {
+        opacity: 1;
+        color: var(--white);
+        font-size: .625rem;
+    }
 }
 
 /* layout */
