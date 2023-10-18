@@ -126,6 +126,7 @@ img {
   top: 0.75rem;
   font-weight: var(--medium-fw);
   transition: top, 0.25s, font-size, 0.25s;
+  text-transform: capitalize;
 }
 
 .password__eye {
@@ -133,7 +134,7 @@ img {
   position: absolute;
   right: 0;
   top: .75rem;
-  z-index: 10;
+  z-index: 1 0;
   cursor: pointer;
   /* align-items: center; */
   /* justify-content: center; */
@@ -206,7 +207,13 @@ img {
 }
 
 /* input focus move up the email, password labels */
+.signup__input:focus + .signup__label {
+  top: -0.75px;
+  /* font-size: var(--small-fz); */
+  font-size: 0.75rem;
 
+
+}
 
 
 
