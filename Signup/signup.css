@@ -130,14 +130,11 @@ img {
 }
 
 .password__eye {
-  /* display: flex; */
   position: absolute;
   right: 0;
   top: 0.75rem;
-  z-index: 1 0;
+  z-index: 10;
   cursor: pointer;
-  /* align-items: center; */
-  /* justify-content: center; */
 }
 
 .signup__box:nth-child(2) input {
