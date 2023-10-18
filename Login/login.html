@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Login/login.css" />
+    <title>Chat App | Log In</title>
+  </head>
+  <body>
+    <div class="signup">
+      <img
+        src="./pexels-william-fortunato-6140676.jpg"
+        alt=""
+        class="signup__img"
+      />
+
+      <form action="" class="signup__form">
+        <h1 class="signup__title">log in</h1>
+        <div class="signup__content">
+          <div class="signup__box">
+            <i class="ri-user-6-line signup__icon"></i>
+            <div class="signup__box-input">
+              <input
+                type="email"
+                class="signup__input"
+                id="signup-email"
+                placeholder=" "
+                required
+              />
+              <label for="" class="signup__label"> email </label>
+            </div>
+          </div>
+
+
+          <div class="signup__box">
+            <i class="ri-lock-2-line signup__icon"></i>
+            <div class="signup__box-input">
+              <input
+                type="password"
+                class="signup__input"
+                id="login-pass"
+                placeholder=" "
+                required
+              />
+              <label for="" class="signup__label"> password </label>
+              <i class="ri-eye-close-line password__eye" id="password-eye"></i>
+            </div>
+          </div>
+
+          <div class="signup__check">
+            <div class="signup__check-group">
+              <input type="checkbox" class="signup_check-input" />
+              <label for="" class="signup__check-label"> remember me </label>
+            </div>
+
+            <!-- <a href="#" class="signup_already">
+                        already have an account? 
+                    </a> -->
+          </div>
+        </div>
+
+        <button class="signup__button" id="signup-button" disabled>log in</button>
+
+        <p class="login__account">
+          don't have an account?
+          <a href="/Signup/signup.html"> sign up </a>
+        </p>
+      </form>
+    </div>
+    <script src="/Signup/signup.js"></script>
+  </body>
+</html>

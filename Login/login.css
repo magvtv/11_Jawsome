@@ -1,0 +1,238 @@
+/* google fonts - quicksand */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --white: #ece5e5;
+  --black: #080a0d;
+
+  --body-font: "Quicksand", sans-serif;
+  --h1-font: 1.75rem;
+  --normal-fz: 1rem;
+  --small-fz: 0.8rem;
+
+  --medium-fw: 600;
+}
+
+/* base styles */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body,
+input,
+button {
+  font-size: var(--normal-fz);
+  font-family: var(--body-font);
+}
+
+body {
+  color: var(--white);
+  /* background-color: blueviolet; */
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.signup {
+  position: relative;
+  height: 100vh;
+  display: grid;
+  align-items: center;
+}
+
+.signup__img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  /* filter: brightness(.4); */
+  /* visibility: hidden; */
+}
+
+.signup__form {
+  position: relative;
+  background-color: hsla(180, 2%, 12%, 0.25);
+  border: 0.125rem solid var(--white);
+  margin-inline: 1.5rem;
+  padding: 2.5rem 1.5rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(0.125rem);
+}
+
+.signup__title {
+  text-align: center;
+  font-size: var(--h1-font);
+  font-weight: var(--medium-fw);
+  text-transform: capitalize;
+  margin-bottom: 1.5rem;
+}
+
+.signup__content,
+.signup__box {
+  display: grid;
+}
+
+.signup__content {
+  row-gap: 1.75rem;
+  margin-bottom: 4rem;
+}
+
+.signup__box {
+  grid-template-columns: max-content 1fr;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.75rem;
+  border-bottom: 0.125rem solid var(--white);
+  border: 10x solid red;
+}
+
+.signup__icon,
+.password__eye {
+  font-size: 1.25rem;
+}
+
+.signup__input {
+  /* visibility: hidden; */
+  width: 100%;
+  padding-block: 1rem;
+  background: none;
+  color: var(--white);
+  position: relative;
+  z-index: 1;
+}
+
+.signup__box-input {
+  position: relative;
+}
+
+.signup__label {
+  position: absolute;
+  left: 0;
+  top: 0.75rem;
+  font-weight: var(--medium-fw);
+  transition: top, 0.25s, font-size, 0.25s;
+  text-transform: capitalize;
+}
+
+.password__eye {
+  position: absolute;
+  right: 0;
+  top: 0.75rem;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.signup__box:nth-child(2) input {
+  padding-right: 1.5rem;
+}
+
+.signup__box:nth-child(3) input {
+  padding-right: 1.5rem;
+}
+
+.signup__check,
+.signup__check-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.signup__check {
+  margin-bottom: 1.5rem;
+}
+
+.signup__check-label {
+  text-transform: capitalize;
+}
+
+.signup__check-label,
+.login__account {
+  font-size: var(--small-fz);
+  text-transform: capitalize;
+}
+
+.signup__check-group {
+  column-gap: 0.5rem;
+}
+
+.signup__check-input {
+  width: 2rem;
+  height: 2rem;
+  /* border: none; */
+  outline: none;
+}
+
+.login__account {
+  text-align: center;
+}
+
+.login__account a {
+  text-align: center;
+  font-weight: var(--medium-fw);
+  color: var(--white);
+}
+
+.login__account a:hover {
+  text-decoration: underline;
+}
+
+.signup__button {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--white);
+  font-weight: var(--medium-fw);
+  text-transform: capitalize;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  transition: background-color, color, 0.5s ease;
+}
+.signup__button:hover {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+/* input focus move up the email, password labels */
+.signup__input:focus + .signup__label {
+  top: -2px;
+  font-size: var(--small-fz);
+}
+
+/* input focus sticky top label */
+.signup__input:not(:placeholder-shown).signup__input:not(:focus)
+  + .signup__label {
+  top: -2px;
+  font-size: var(--small-fz);
+}
+
+/* media breakpoints */
+
+@media screen and (min-width: 576px) {
+  .signup {
+    justify-content: center;
+  }
+  .signup__form {
+    width: 32rem;
+    padding: 4rem 3rem 3.5em;
+    border-radius: 1.5rem;
+  }
+
+  .signup__title {
+    font-size: 2rem;
+  }
+}
