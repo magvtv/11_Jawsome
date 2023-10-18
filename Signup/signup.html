@@ -27,6 +27,7 @@
               <input
                 type="email"
                 class="signup__input"
+                id="signup-email"
                 placeholder=" "
                 required
               />
@@ -40,11 +41,12 @@
               <input
                 type="password"
                 class="signup__input"
-                id="signup-pass"
+                id="signup-pass1"
                 placeholder=" "
                 required
               />
               <label for="" class="signup__label"> password </label>
+              <i class="ri-eye-close-line password__eye" id="password-eye"></i>
             </div>
           </div>
 
@@ -54,7 +56,7 @@
               <input
                 type="password"
                 class="signup__input"
-                id="signup-pass"
+                id="signup-pass2"
                 placeholder=" "
                 required
               />
@@ -75,7 +77,7 @@
           </div>
         </div>
 
-        <button class="signup__button">create account</button>
+        <button class="signup__button" id="signup-button" disabled>create account</button>
 
         <p class="login__account">
           have an account?
