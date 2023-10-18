@@ -13,10 +13,9 @@ const showPassword = (signupPassword, passwordEye) => {
       eyeIcon.classList.add("ri-eye-line");
       eyeIcon.classList.remove("ri-eye-close-line");
     } else {
-        input.text = 'password';
-        eyeIcon.classList.add("ri-eye-close-line");
-        eyeIcon.classList.remove("ri-eye-line");
-        eye
+      input.type = "password";
+      eyeIcon.classList.add("ri-eye-close-line");
+      eyeIcon.classList.remove("ri-eye-line");
     }
   });
 };

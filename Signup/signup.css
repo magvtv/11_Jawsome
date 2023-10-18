@@ -109,7 +109,7 @@ img {
 .signup__input {
   /* visibility: hidden; */
   width: 100%;
-  padding-block: 0.75rem;
+  padding-block: 1rem;
   background: none;
   color: var(--white);
   position: relative;
@@ -138,7 +138,11 @@ img {
 }
 
 .signup__box:nth-child(2) input {
-  padding-right: 2rem;
+  padding-right: 1.5rem;
+}
+
+.signup__box:nth-child(3) input {
+  padding-right: 1.5rem;
 }
 
 .signup__check,
@@ -206,17 +210,14 @@ img {
 /* input focus move up the email, password labels */
 .signup__input:focus + .signup__label {
   top: -2px;
-  /* font-size: var(--small-fz); */
-  font-size: 0.75rem;
-  /* display: none; */
+  font-size: var(--small-fz);
 }
 
 /* input focus sticky top label */
 .signup__input:not(:placeholder-shown).signup__input:not(:focus)
   + .signup__label {
   top: -2px;
-  /* font-size: var(--small-fz); */
-  font-size: 0.75rem;
+  font-size: var(--small-fz);
 }
 
 /* media breakpoints */
