@@ -109,7 +109,7 @@ img {
 .signup__input {
   /* visibility: hidden; */
   width: 100%;
-  padding-block: 0.75rem;
+  padding-block: 1rem;
   background: none;
   color: var(--white);
   position: relative;
@@ -126,18 +126,23 @@ img {
   top: 0.75rem;
   font-weight: var(--medium-fw);
   transition: top, 0.25s, font-size, 0.25s;
+  text-transform: capitalize;
 }
 
 .password__eye {
   position: absolute;
   right: 0;
-  top: 1.125rem;
-  z-index: 2;
+  top: 0.75rem;
+  z-index: 10;
   cursor: pointer;
 }
 
 .signup__box:nth-child(2) input {
-  padding-right: 1.75rem;
+  padding-right: 1.5rem;
+}
+
+.signup__box:nth-child(3) input {
+  padding-right: 1.5rem;
 }
 
 .signup__check,
@@ -158,6 +163,7 @@ img {
 .signup__check-label,
 .login__account {
   font-size: var(--small-fz);
+  text-transform: capitalize;
 }
 
 .signup__check-group {
@@ -170,8 +176,14 @@ img {
   /* border: none; */
   outline: none;
 }
+
+.login__account {
+  text-align: center;
+}
+
 .login__account a {
   text-align: center;
+  font-weight: var(--medium-fw);
   color: var(--white);
 }
 
@@ -188,4 +200,39 @@ img {
   text-transform: capitalize;
   cursor: pointer;
   margin-bottom: 2rem;
+  transition: background-color, color, 0.5s ease;
+}
+.signup__button:hover {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+/* input focus move up the email, password labels */
+.signup__input:focus + .signup__label {
+  top: -2px;
+  font-size: var(--small-fz);
+}
+
+/* input focus sticky top label */
+.signup__input:not(:placeholder-shown).signup__input:not(:focus)
+  + .signup__label {
+  top: -2px;
+  font-size: var(--small-fz);
+}
+
+/* media breakpoints */
+
+@media screen and (min-width: 576px) {
+  .signup {
+    justify-content: center;
+  }
+  .signup__form {
+    width: 32rem;
+    padding: 4rem 3rem 3.5em;
+    border-radius: 1.5rem;
+  }
+
+  .signup__title {
+    font-size: 2rem;
+  }
 }
