@@ -221,3 +221,18 @@ img {
 }
 
 /* media breakpoints */
+
+@media screen and (min-width: 576px) {
+  .signup {
+    justify-content: center;
+  }
+  .signup__form {
+    width: 32rem;
+    padding: 4rem 3rem 3.5em;
+    border-radius: 1.5rem;
+  }
+
+  .signup__title {
+    font-size: 2rem;
+  }
+}
