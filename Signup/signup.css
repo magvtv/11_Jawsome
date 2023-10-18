@@ -133,7 +133,7 @@ img {
   /* display: flex; */
   position: absolute;
   right: 0;
-  top: .75rem;
+  top: 0.75rem;
   z-index: 1 0;
   cursor: pointer;
   /* align-items: center; */
@@ -177,7 +177,7 @@ img {
 }
 
 .login__account {
-    text-align: center;
+  text-align: center;
 }
 
 .login__account a {
@@ -199,26 +199,27 @@ img {
   text-transform: capitalize;
   cursor: pointer;
   margin-bottom: 2rem;
-  transition: background-color, color, .5s ease;
+  transition: background-color, color, 0.5s ease;
 }
 .signup__button:hover {
-    background-color: var(--black);
-    color: var(--white);
+  background-color: var(--black);
+  color: var(--white);
 }
 
 /* input focus move up the email, password labels */
 .signup__input:focus + .signup__label {
-  top: -0.75px;
+  top: -2px;
   /* font-size: var(--small-fz); */
   font-size: 0.75rem;
-
-
+  /* display: none; */
 }
 
-
-
 /* input focus sticky top label */
-
-
+.signup__input:not(:placeholder-shown).signup__input:not(:focus)
+  + .signup__label {
+  top: -2px;
+  /* font-size: var(--small-fz); */
+  font-size: 0.75rem;
+}
 
 /* media breakpoints */
