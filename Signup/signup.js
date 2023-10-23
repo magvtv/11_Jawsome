@@ -8,7 +8,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // make sure the password above is the same as the one below
   const doPasswordsMatch = () => {
-    return passwordOne.value === passwordTwo.value;
+    const passwordOneValue = passwordOne.value.trim()
+    const passwordTwoValue = passwordTwo.value.trim();
+
+    if (passwordOneValue === '' || passwordTwoValue === '') {
+      return false
+    }
+
+    return passwordOneValue === passwordTwoValue;
   };
 
   const isFormValid = () => {
@@ -31,7 +38,6 @@ document.addEventListener("DOMContentLoaded", () => {
   passwordOne.addEventListener("input", updateButtonState);
   passwordTwo.addEventListener("input", updateButtonState);
 
-  // updateButtonState();
   form.addEventListener("submit", (go) => {
     if (!doPasswordsMatch()) {
       go.preventDefault();
@@ -43,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // show passcode with clicking eye icon. could i implement for both password fields?
 const showPassword = (signUpPassword, passwordEye) => {
   const input = document.getElementById(signUpPassword),
-  eyeIcon = document.getElementById(passwordEye);
+    eyeIcon = document.getElementById(passwordEye);
 
   eyeIcon.addEventListener("click", () => {
     // change the password to plain text
@@ -61,4 +67,3 @@ const showPassword = (signUpPassword, passwordEye) => {
 
 showPassword("signup-pass1", "password-eye1");
 showPassword("signup-pass2", "password-eye2");
-
