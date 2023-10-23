@@ -40,20 +40,20 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // show passcode with clicking eye icon. could i implement for both password fields?
-const showPassword = (signUpPassword, passwordEye) => {
-  const input = document.getElementById(signUpPassword),
+const showPassword = (logInPassword, passwordEye) => {
+  const input = document.getElementById(logInPassword),
   eyeIcon = document.getElementById(passwordEye);
 
   eyeIcon.addEventListener("click", () => {
     // change the password to plain text
     if (input.type === "password") {
       input.type = "text";
-      eyeIcon.classList.add("ri-eye-line");
-      eyeIcon.classList.remove("ri-eye-close-line");
-    } else {
-      input.type = "password";
       eyeIcon.classList.add("ri-eye-close-line");
       eyeIcon.classList.remove("ri-eye-line");
+    } else {
+      input.type = "password";
+      eyeIcon.classList.add("ri-eye-line");
+      eyeIcon.classList.remove("ri-eye-close-line");
     }
   });
 };
