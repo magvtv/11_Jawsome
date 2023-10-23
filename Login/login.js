@@ -1,35 +1,28 @@
-const form = document.getElementsByClassName("signup__form");
+const form = document.getElementsByClassName("login__form");
 // deactivate 'create account' until all details have been filled in
 document.addEventListener("DOMContentLoaded", () => {
-  const email = document.getElementById("signup-email");
-  const signUpButton = document.getElementById("signup-button");
+  const email = document.getElementById("login-email");
+  const password = document.getElementById('login-pass')
+  const logInButton = document.getElementById("login-button");
 
-  // make sure the password above is the same as the one below
-//   const doPasswordsMatch = () => {
-//     return passwordOne === passwordTwo;
-//   };
 
   const isFormValid = () => {
     const isEmailValid = email.checkValidity();
-    const isPasswordOneValid = passwordOne.checkValidity();
-    const isPasswordTwoValid = passwordTwo.checkValidity();
+    const isPasswordValid = password.checkValidity();
     return (
       isEmailValid &&
-      isPasswordOneValid &&
-      isPasswordTwoValid 
-    //   doPasswordsMatch()
+      isPasswordValid
     );
   };
 
   const updateButtonState = () => {
-    signUpButton.disabled = !isFormValid();
+    logInButton.disabled = !isFormValid();
   };
 
   email.addEventListener("input", updateButtonState);
-  passwordOne.addEventListener("input", updateButtonState);
-  passwordTwo.addEventListener("input", updateButtonState);
+  password.addEventListener("input", updateButtonState);
 
-  updateButtonState();
+  // updateButtonState();
 //   form.addEventListener("submit", (go) => {
 //     if (!doPasswordsMatch()) {
 //       go.preventDefault();
