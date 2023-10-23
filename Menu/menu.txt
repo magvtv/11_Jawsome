@@ -10,3 +10,5 @@ leave home still
 settings - change avatar, chat-theme
 # explore - browse to inbox and groups or channels
 should be able to add help and 
+
+why the use of radio as input? 
