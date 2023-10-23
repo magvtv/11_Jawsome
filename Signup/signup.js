@@ -7,9 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const signUpButton = document.getElementById("signup-button");
 
   // make sure the password above is the same as the one below
-//   const doPasswordsMatch = () => {
-//     return passwordOne === passwordTwo;
-//   };
+  const doPasswordsMatch = () => {
+    return passwordOne === passwordTwo;
+  };
 
   const isFormValid = () => {
     const isEmailValid = email.checkValidity();
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
       isEmailValid &&
       isPasswordOneValid &&
       isPasswordTwoValid &&
-    //   doPasswordsMatch()
+      doPasswordsMatch()
     );
   };
 
@@ -32,33 +32,34 @@ document.addEventListener("DOMContentLoaded", () => {
   passwordTwo.addEventListener("input", updateButtonState);
 
   updateButtonState();
-//   form.addEventListener("submit", (go) => {
-//     if (!doPasswordsMatch()) {
-//       go.preventDefault();
-//       alert("Your passwords do not match!");
-//     }
-//   });
+  form.addEventListener("submit", (go) => {
+    if (!doPasswordsMatch()) {
+      go.preventDefault();
+      alert("Your passwords do not match!");
+    }
+  });
 
 });
 
 // show passcode with clicking eye icon. could i implement for both password fields?
-const showPassword = (signUpPasswordOne, signUpPasswordTwo, passwordEye) => {
-  const inputOne = document.getElementById(signUpPasswordOne),
-    inputTwo = document.getElementById(signUpPasswordTwo);
+const showPassword = (signUpPassword, passwordEye) => {
+  const input = document.getElementById(signUpPassword),
   eyeIcon = document.getElementById(passwordEye);
 
   eyeIcon.addEventListener("click", () => {
     // change the password to plain text
-    if (inputOne.type === "password") {
-      inputOne.type = "text";
-      eyeIcon.classList.add("ri-eye-line");
-      eyeIcon.classList.remove("ri-eye-close-line");
-    } else {
-      inputOne.type = "password";
+    if (input.type === "password") {
+      input.type = "text";
       eyeIcon.classList.add("ri-eye-close-line");
       eyeIcon.classList.remove("ri-eye-line");
+    } else {
+      input.type = "password";
+      eyeIcon.classList.add("ri-eye-line");
+      eyeIcon.classList.remove("ri-eye-close-line");
     }
   });
 };
 
-showPassword("signup-pass1", "signup-pass2", "password-eye");
+showPassword("signup-pass1", "password-eye1");
+showPassword("signup-pass2", "password-eye2");
+
