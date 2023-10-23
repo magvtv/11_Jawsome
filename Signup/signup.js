@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // make sure the password above is the same as the one below
   const doPasswordsMatch = () => {
-    return passwordOne === passwordTwo;
+    return passwordOne.value === passwordTwo.value;
   };
 
   const isFormValid = () => {
@@ -31,14 +31,13 @@ document.addEventListener("DOMContentLoaded", () => {
   passwordOne.addEventListener("input", updateButtonState);
   passwordTwo.addEventListener("input", updateButtonState);
 
-  updateButtonState();
+  // updateButtonState();
   form.addEventListener("submit", (go) => {
     if (!doPasswordsMatch()) {
       go.preventDefault();
       alert("Your passwords do not match!");
     }
   });
-
 });
 
 // show passcode with clicking eye icon. could i implement for both password fields?
