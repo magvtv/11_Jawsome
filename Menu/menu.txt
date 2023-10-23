@@ -1,0 +1,14 @@
+we have the following as the menu items
+- home
+- groups/ channels (most preferred)
+- chats / inbox (most preferred)
+- settings
+- log out
+
+omit home since it is the default page
+leave home still
+settings - change avatar, chat-theme
+# explore - browse to inbox and groups or channels
+should be able to add help and 
+
+why the use of radio as input? 
