@@ -47,14 +47,14 @@ img {
   height: auto;
 }
 
-.signup {
+.login {
   position: relative;
   height: 100vh;
   display: grid;
   align-items: center;
 }
 
-.signup__img {
+.login__img {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -64,7 +64,7 @@ img {
   /* visibility: hidden; */
 }
 
-.signup__form {
+.login__form {
   position: relative;
   background-color: hsla(180, 2%, 12%, 0.25);
   border: 0.125rem solid var(--white);
@@ -74,7 +74,7 @@ img {
   backdrop-filter: blur(0.125rem);
 }
 
-.signup__title {
+.login__title {
   text-align: center;
   font-size: var(--h1-font);
   font-weight: var(--medium-fw);
@@ -82,17 +82,17 @@ img {
   margin-bottom: 1.5rem;
 }
 
-.signup__content,
-.signup__box {
+.login__content,
+.login__box {
   display: grid;
 }
 
-.signup__content {
+.login__content {
   row-gap: 1.75rem;
   margin-bottom: 4rem;
 }
 
-.signup__box {
+.login__box {
   grid-template-columns: max-content 1fr;
   justify-content: center;
   align-items: center;
@@ -101,12 +101,12 @@ img {
   border: 10x solid red;
 }
 
-.signup__icon,
+.login__icon,
 .password__eye {
   font-size: 1.25rem;
 }
 
-.signup__input {
+.login__input {
   /* visibility: hidden; */
   width: 100%;
   padding-block: 1rem;
@@ -116,11 +116,11 @@ img {
   z-index: 1;
 }
 
-.signup__box-input {
+.login__box-input {
   position: relative;
 }
 
-.signup__label {
+.login__label {
   position: absolute;
   left: 0;
   top: 0.75rem;
@@ -137,40 +137,40 @@ img {
   cursor: pointer;
 }
 
-.signup__box:nth-child(2) input {
+.login__box:nth-child(2) input {
   padding-right: 1.5rem;
 }
 
-.signup__box:nth-child(3) input {
+.login__box:nth-child(3) input {
   padding-right: 1.5rem;
 }
 
-.signup__check,
-.signup__check-group {
+.login__check,
+.login__check-group {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.signup__check {
+.login__check {
   margin-bottom: 1.5rem;
 }
 
-.signup__check-label {
+.login__check-label {
   text-transform: capitalize;
 }
 
-.signup__check-label,
+.login__check-label,
 .login__account {
   font-size: var(--small-fz);
   text-transform: capitalize;
 }
 
-.signup__check-group {
+.login__check-group {
   column-gap: 0.5rem;
 }
 
-.signup__check-input {
+.login__check-input {
   width: 2rem;
   height: 2rem;
   /* border: none; */
@@ -191,7 +191,7 @@ img {
   text-decoration: underline;
 }
 
-.signup__button {
+.login__button {
   width: 100%;
   padding: 1rem;
   border-radius: 0.5rem;
@@ -202,20 +202,20 @@ img {
   margin-bottom: 2rem;
   transition: background-color, color, 0.5s ease;
 }
-.signup__button:hover {
+.login__button:hover {
   background-color: var(--black);
   color: var(--white);
 }
 
 /* input focus move up the email, password labels */
-.signup__input:focus + .signup__label {
+.login__input:focus + .login__label {
   top: -2px;
   font-size: var(--small-fz);
 }
 
 /* input focus sticky top label */
-.signup__input:not(:placeholder-shown).signup__input:not(:focus)
-  + .signup__label {
+.login__input:not(:placeholder-shown).login__input:not(:focus)
+  + .login__label {
   top: -2px;
   font-size: var(--small-fz);
 }
@@ -223,16 +223,16 @@ img {
 /* media breakpoints */
 
 @media screen and (min-width: 576px) {
-  .signup {
+  .login {
     justify-content: center;
   }
-  .signup__form {
+  .login__form {
     width: 32rem;
     padding: 4rem 3rem 3.5em;
     border-radius: 1.5rem;
   }
 
-  .signup__title {
+  .login__title {
     font-size: 2rem;
   }
 }
