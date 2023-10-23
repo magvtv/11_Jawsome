@@ -18,6 +18,11 @@
 	--font-bold: 700;
 	--z-tooltip: 20;
 	--z-fixed: 100;
+
+    --bg-1: url('pexels-adrien-olichon.jpg');
+    --bg-2: url('pexels-pawel-kalisinski.jpg');
+    --bg-3: url('pexels-sam-kolder.jpg');
+
 }
 
 * {
@@ -136,7 +141,9 @@ img {
 
 .bg-image {
 	position: absolute;
-    background-image: url('pexels-sam-kolder-2387873.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 	left: 0;
 	top: 0;
 	width: 100%;

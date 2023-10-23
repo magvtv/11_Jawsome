@@ -1,4 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
+	// randomize the chat background photos
+	const backgrounds = ['--bg-1', '--bg-2', '--bg-3'];
+	const randomBackground = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+    const bgClass = document.querySelector('bg-image')
+    bgClass.style.backgroundImage = `var(${randomBackground})}`
+
+	// toggle the menu icon to show sidebar
 	function showSidebar(toggleId, sidebarId) {
 		const toggle = document.getElementById(toggleId),
 			sidebar = document.getElementById(sidebarId),
