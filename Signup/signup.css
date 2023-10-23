@@ -207,6 +207,13 @@ img {
   color: var(--white);
 }
 
+.signup__button:disabled {
+  background-color: var(--white);
+  color: var(--black);
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
 /* input focus move up the email, password labels */
 .signup__input:focus + .signup__label {
   top: -2px;
