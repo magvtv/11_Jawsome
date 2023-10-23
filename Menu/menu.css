@@ -7,7 +7,7 @@
     --white: #ece5e5;
     --text-color: #d9d4db;
     --dark-color-light: #2f5663;
-    --white-color-light:#636161 ;
+    --text-color-dark: #173038;
     --gradientX: linear-gradient(90deg, #e0d6d6, #4597b3, #e0d6d6) ;
     --gradientY: linear-gradient(0, #e0d6d6, #4597b3, #e0d6d6);
 
@@ -145,6 +145,7 @@ img {
     object-fit: cover;
     object-position: center;
     z-index: -1;
+    filter: brightness(.5);
 
 }
 /* header */
@@ -300,7 +301,7 @@ header {
 }
 
 .sidebar__link:hover{
-    background: var(--white-color-light);
+    background: var(--text-color-dark);
     backdrop-filter: blur(1rem);
     -webkit-backdrop-filter: blur(1rem);
     color: var(--white);
