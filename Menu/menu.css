@@ -6,10 +6,10 @@
     --header-height: 3.5rem;
     --white: #ece5e5;
     --text-color: #d9d4db;
-    --dark-color-light: #291f1f;
+    --dark-color-light: #2f5663;
     --white-color-light:#636161 ;
-    --gradientX: linear-gradient(90deg, #000, #646E68, #000) ;
-    --gradientY: linear-gradient(0, #000, #646E68, #000);
+    --gradientX: linear-gradient(90deg, #e0d6d6, #4597b3, #e0d6d6) ;
+    --gradientY: linear-gradient(0, #e0d6d6, #4597b3, #e0d6d6);
 
     --body-font: 'Quicksand', sans-serif;
     --normal-font-size: .95rem;
@@ -242,6 +242,7 @@ header {
 .sidebar__content {
     position: relative;
     overflow: auto;
+    scroll-behavior: smooth;
     padding-top: 1rem;
 }
 
