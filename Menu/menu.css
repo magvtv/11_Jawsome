@@ -7,7 +7,7 @@
 	--white: #ece5e5;
 	--text-color: #d9d4db;
 	--dark-color-light: #2f5663;
-	--text-color-dark: #173038;
+	--text-color-dark: #1d3138;
 	--gradientX: linear-gradient(90deg, #e0d6d6, #4597b3, #e0d6d6);
 	--gradientY: linear-gradient(0, #e0d6d6, #4597b3, #e0d6d6);
 
@@ -225,6 +225,10 @@ header {
 	transition: left 0.5s;
 }
 
+.show-sidebar {
+	left: 0;
+}
+
 .sidebar::after {
 	content: '';
 	position: absolute;
@@ -248,6 +252,19 @@ header {
 	overflow: auto;
 	scroll-behavior: smooth;
 	padding-top: 1rem;
+}
+
+.active-link {
+	background-color: var(--text-color-dark);
+	backdrop-filter: blur(1rem);
+	-webkit-backdrop-filter: blur(1rem);
+}
+
+.active-link span {
+	color: white;
+	font-weight: var(--font-medium);
+
+
 }
 
 .sidebar__content::after {
@@ -349,13 +366,3 @@ header {
 	cursor: pointer;
 }
 
-.show-sidebar {
-	left: 0;
-}
-
-.show-sidebar #close-menu {
-	display: block;
-}
-.show-sidebar #open-menu {
-	display: none;
-}
